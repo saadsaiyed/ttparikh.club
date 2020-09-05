@@ -1,11 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Oswald:200,300,400&display=swap');
 :root{
     --purple-theme: #091428;
+    --lightpurple-theme: #50647B;
     --gray-bg-heading: #B8B8B8;
-    --gray-bg-sidebar: #E0E0E0;
+    --gray-bg-sidebar: #DEE3E7;
     --lightgreen-theme: #65ffce;
     --green-theme: #46B692;
     --red-theme: #F75B54;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 0px 0px 10px 10px;
+    background: var(--lightpurple-theme);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:var(--green-theme); 
+    border-radius: 0 0 10px 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--lightgreen-theme); 
 }
 *{
     box-sizing: border-box;
@@ -90,9 +110,9 @@ input[type=button], input[type=reset], input[type=submit]{
     background-color: var(--purple-theme);
     transition: 0.5s;
     padding-top: 40px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
-.menu, .sidebar-dropdown{
+.menu{
     padding: 20px 8px 20px 32px;
     font-size: 18px;
     color: whitesmoke;
@@ -105,16 +125,12 @@ input[type=button], input[type=reset], input[type=submit]{
     transition: 0.3s;
     padding-left: 10px;
 }
-.sidebar-dropdown{
-    display: block;
-    padding-left: 8px;
-    text-decoration: none;
-}
-.menu:hover{
+.menu:hover, .active{
     background-color: var(--gray-bg-sidebar);
     color: var(--purple-theme);
 }
-.menu:hover > span:nth-child(2){
+
+.menu:hover > span:nth-child(2), .active > span:nth-child(2){
     color: var(--purple-theme);
 }
 .root {
@@ -129,7 +145,21 @@ input[type=button], input[type=reset], input[type=submit]{
     line-height: 4.7px;
     margin-left: -2px;
 }
-
+/* -----Sidebar (Dropdown)----- */
+.side-drop {
+    transition: 3s;
+    background-color: var(--lightpurple-theme);
+}
+.side-drop > a{
+    display: block;
+    text-decoration: none;
+}
+.side-drop div{
+    padding: 20px 8px 20px 40px;
+}
+.dropdown-btn span:nth-child(3){
+    margin-left: 90px;
+}
 
 /*-----Navigation Bar-----*/
 header{

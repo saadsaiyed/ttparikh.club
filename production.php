@@ -110,7 +110,7 @@
 
 </head>
 <body>
-    <div class="sidebar" id = "sidebar_Id">
+    <!-- <div class="sidebar" id = "sidebar_Id">
         <div class="search-box">
             <form action="post"  action="php/bookingFetch.php" enctype = "multipart/form-data">
                 <table>
@@ -122,19 +122,25 @@
             </form>
         </div>
         <a href="index.php"><div class="menu"><span class="icon-clipboard"></span><span>Dashboard</span></div></a>
-        <a href="#Invoice"><div class="menu"><span class="icon-browser"></span><span>Invoice</span></div></a>
-        <a href="report.php"><div class="menu"><span class="icon-presentation"></span><span>Report</span></div></a>
+        <a href="invoice.php"><div class="menu"><span class="icon-browser"></span><span>Invoice</span></div></a>
+        <a onclick="dropdownToggle()"><div class="menu dropdown-btn"><span class="icon-presentation"></span><span>Report</span><span><i data-feather="chevron-down"></i></span></div></a>
+        <div class="side-drop" id="side-drop-id">
+            <a href="#OverallReport"><div class="menu drop-content"><span class="icon-gift"></span><span>Overall Report</span></div></a>
+            <a href="#InvoiceReport"><div class="menu drop-content"><span class="icon-gift"></span><span>Invoice Report</span></div></a>
+            <a href="productReport.php"><div class="menu drop-content"><span class="icon-gift"></span><span>Product Report</span></div></a>
+            <a href="#CustomerReport"><div class="menu drop-content"><span class="icon-gift"></span><span>Customer Report</span></div></a>
+        </div>
         <a href="production.php"><div class="menu"><span class="icon-gift"></span><span>Production</span></div></a>
         <a href="#Garbage"><div class="menu"><span class="icon-basket"></span><span>Garbage</span></div></a>
-        <a href="#Customer"><div class="menu"><span class="icon-profile-male"></span><span>Customer</span></div></a>
-        <a href="#Products"><div class="menu"><span class="icon-beaker"></span><span>Products</span></div></a>
-        <a href="#Tracking"><div class="menu"><span class="icon-map"></span><span>Tracking Number</div></a>
+        <a href="customer.php"><div class="menu"><span class="icon-profile-male"></span><span>Customer</span></div></a>
+        <a href="products.php"><div class="menu"><span class="icon-beaker"></span><span>Products</span></div></a>
+        <a href="tracking.php"><div class="menu"><span class="icon-map"></span><span>Tracking Number</div></a>
         <a href="#Help"><div class="menu"><span class="icon-genius"></span><span>Help</span></div></a>
-        <a href="#Settings"><div class="menu"><span class="icon-gears"></span><span>Settings</span></div></a>
-    </div>
+        <a href="settings.php"><div class="menu"><span class="icon-gears"></span><span>Settings</span></div></a>
+    </div> -->
 
-    <div class="root" id = "root_Id">
-        <header>
+    <div id = "root_Id">
+        <!-- <header>
             <div class="burgureMenuIcon change" onclick="openCloseSidebar(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -148,7 +154,7 @@
                 <a href="#ContactUs" onclick=someFunc() ><i data-feather="github"></i></a>
                 <input type="color" name="" id="colorPicker2" style="width:auto; background-color:var(--green-theme);border:none;">
             </ul>
-        </header>
+        </header> -->
 
         <div class="grid_container">
             <div class="grid item1">
@@ -203,8 +209,12 @@
     </div>
 
     
-    <script>
-      feather.replace()
-    </script>
+    <!-- <script>
+        feather.replace();
+        var dropdown = document.querySelectorAll(".drop-content");
+        for (let i = 0; i < dropdown.length; i++) {
+            dropdown[i].style.display = "none";
+        }
+    </script> -->
 </body>
 </html>
